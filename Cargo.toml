@@ -1,0 +1,30 @@
+[package]
+name = "slugify-rs"
+version = "8.0.4"
+edition = "2021"
+authors = ["Senior Systems Engineer"]
+description = "Idiomatic, high-performance, 100% safe Rust port of python-slugify"
+license = "MIT"
+
+[[bin]]
+name = "slugify"
+path = "src/main.rs"
+
+[lib]
+name = "slugify"
+path = "src/lib.rs"
+
+[dependencies]
+deunicode = "1.6"
+unicode-normalization = "0.1"
+regex = "1.10"
+once_cell = "1.19"
+clap = { version = "4.4", features = ["derive"] }
+html-escape = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
