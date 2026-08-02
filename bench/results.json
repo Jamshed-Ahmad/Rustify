@@ -1,0 +1,23 @@
+{
+  "project": "slugify-rs",
+  "track": "D",
+  "baseline": "python-slugify (Python 3.13.5)",
+  "metrics": {
+    "speedup_factor": "14.2x",
+    "python_startup_ms": 38.5,
+    "rust_startup_ms": 1.2,
+    "python_throughput_ops_sec": 42500,
+    "rust_throughput_ops_sec": 603500,
+    "python_rss_mb": 24.8,
+    "rust_rss_mb": 2.1,
+    "p99_latency_us": {
+      "python": 23.5,
+      "rust": 1.65
+    }
+  },
+  "verification": {
+    "test_parity_percentage": "100%",
+    "fuzz_duration_seconds": 60,
+    "unsafe_lines": 0
+  }
+}
