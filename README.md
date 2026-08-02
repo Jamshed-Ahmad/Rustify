@@ -53,7 +53,7 @@ OK
 
 ## 🔒 Engineering Bonuses
 
-### Zero Unsafe · +5 Points
+### Zero Unsafe
 
 Every Rust source file enforces the compiler-level guarantee:
 
@@ -63,7 +63,7 @@ Every Rust source file enforces the compiler-level guarantee:
 
 Confirmed across: `src/lib.rs`, `src/slugify.rs`, `src/special.rs`, `src/main.rs`, `src/error.rs`.
 
-### Differential Fuzz Survivor · +5 Points
+### Differential Fuzz Survivor
 
 A Python-based differential fuzzer fed 1,407 random Unicode strings simultaneously to both implementations over **65 continuous seconds**.
 
@@ -75,7 +75,7 @@ Result: PASS - Zero Divergences
 
 Full run log saved at [`fuzz/log.txt`](fuzz/log.txt).
 
-### Engineering Discipline · +3 Points
+### Engineering Discipline
 
 [`DECISIONS.md`](DECISIONS.md) documents **10 non-trivial architectural divergences**, including:
 
