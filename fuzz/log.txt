@@ -1,0 +1,10 @@
+Differential Fuzzing: slugify-rs vs python-slugify
+Start: 2026-08-02T23:19:13
+Duration: 65s
+------------------------------------------------------------
+[46.2s] 1000 tests run, 0 divergences
+------------------------------------------------------------
+End: 2026-08-02T23:20:18
+Total: 1407 inputs tested in 65.00s
+Divergences: 0
+Result: PASS - Zero Divergences

@@ -1,0 +1,18 @@
+[package]
+name = "slugify-fuzz"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[[bin]]
+name = "fuzz_slugify"
+path = "fuzz_targets/fuzz_slugify.rs"
+test = false
+doc = false
+
+[dependencies]
+libfuzzer-sys = "0.4"
+slugify = { path = ".." }
