@@ -1,3 +1,5 @@
+//! Rustify (`slugify-rs`) public library interface.
+
 #![forbid(unsafe_code)]
 
 pub mod error;
