@@ -73,9 +73,17 @@ if __name__ == "__main__":
     if not os.path.exists(RUST_BIN):
         print(f"ERROR: Binary not found at {RUST_BIN}. Run 'cargo build --release' first.")
         sys.exit(1)
+    
+    duration = 65
+    if len(sys.argv) > 1:
+        try:
+            duration = int(sys.argv[1])
+        except ValueError:
+            pass
+
     print(f"Using binary: {RUST_BIN}")
-    print("Starting differential fuzzer for 65 seconds...")
-    log_lines, total, divergences = run_fuzzer(65)
+    print(f"Starting differential fuzzer for {duration} seconds...")
+    log_lines, total, divergences = run_fuzzer(duration)
     with open(os.path.join("fuzz", "log.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(log_lines) + "\n")
     print(f"\nDone: {total} tests, {divergences} divergences. Log saved to fuzz/log.txt")
